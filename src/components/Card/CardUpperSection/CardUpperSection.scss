@@ -1,0 +1,25 @@
+.CardUpperSection{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.SectionLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.CardDate {
+    white-space: pre;
+}
+
+.SectionRight{
+    display: flex;
+}
+
+.FilterContainer {
+    width: 25%;
+}

@@ -1,0 +1,49 @@
+.CardMiddleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.Text {
+    color: #5C5C5C;
+    opacity: .7;
+}
+
+.Heading{
+    color: black;
+}
+
+.Info {
+    display: flex;
+    p {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+
+        span {
+            &:last-child {
+                color: #5C5C5C;
+                opacity: .7;
+            }
+        }
+
+        &:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        &:not(:last-child) {
+            border-right: 2px solid black;
+        }
+    }
+}
+
+.PriorityType {
+    color: red;
+}
+
+P {
+    margin: 0px;
+    opacity: 1;
+}

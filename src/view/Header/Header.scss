@@ -1,0 +1,70 @@
+.Container {
+    display:flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 30px auto;
+    text-align: left;
+
+}
+
+.UpperHeader {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
+    opacity: 54%;
+}
+
+
+.Buttons-Cont {
+    display: flex;
+}
+
+.SearchBox {
+    display: "flex"; 
+    color: "gray" ;
+    border: 1px solid #707070;
+}
+
+/* .FilterBtn:hover {
+    
+        background: 'none',
+    } */
+
+    .LowerHeader {
+        margin-bottom: 20px;
+    }
+
+    .AppliedFilterContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .AppliedFilterLeft{
+        color: #3892FF;
+        background-color: white;
+        border: 2px solid gray;
+        width: max-content;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .AppliedFilterRight{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .BoardView {
+        color: #B7B7B7;
+    }
+
+    .Crossbadge {
+        top: -20px !important;
+        right: -10px !important;
+    }
