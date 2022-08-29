@@ -13,14 +13,8 @@ export default function CardUpperSection() {
       </div>
       <div className="SectionRight">
         <PositionedMenu text="Acknowledged"></PositionedMenu>
-
-        <PositionedMenu text={<AccessAlarmsIcon />}>
-          {/* <AccessAlarmsIcon /> */}
-        </PositionedMenu>
+        <PositionedMenu text={<AccessAlarmsIcon />}></PositionedMenu>
         <SharePositionedMenu text={<ShareIcon />}></SharePositionedMenu>
-        {/* <PositionedMenu text={<ShareIcon />}> */}
-        {/* <ShareIcon /> */}
-        {/* </PositionedMenu> */}
       </div>
     </div>
   );

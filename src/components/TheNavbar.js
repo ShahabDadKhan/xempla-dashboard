@@ -162,51 +162,19 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ bgcolor: "white" }}>
         <Toolbar sx={{ width: "95%", margin: "auto" }}>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography> */}
           <img className="LogoImage" src={logo} alt="logoimage" />
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Search sx={{ display: "flex", color: "gray" }}>
               <SearchIconWrapper>
                 <LocationOnIcon />
-                {/* <SearchIcon /> */}
               </SearchIconWrapper>
               <StyledInputBase
-                // sx={{ color: "gray" }}
                 placeholder="New Horizon Facility"
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
-            {/* <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton> */}
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              // color="inherit"
-            >
+            <IconButton size="large" aria-label="show 17 new notifications">
               <Badge
                 sx={{
                   "& .MuiBadge-badge": {
@@ -221,14 +189,8 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              // color="inherit"
-            >
-              {/* <Badge badgeContent={17} color="error"> */}
+            <IconButton size="large" aria-label="show 17 new notifications">
               <CloudIcon />
-              {/* </Badge> */}
             </IconButton>
             <IconButton
               size="large"
@@ -237,7 +199,6 @@ export default function PrimarySearchAppBar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              // color="inherit"
             >
               <AccountCircle />
             </IconButton>
@@ -249,7 +210,6 @@ export default function PrimarySearchAppBar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              // color="inherit"
             >
               <MoreIcon />
             </IconButton>

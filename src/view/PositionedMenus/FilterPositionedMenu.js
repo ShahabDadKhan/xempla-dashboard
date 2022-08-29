@@ -83,7 +83,6 @@ export default function PositionedMenu(props) {
         id="account-menu"
         open={open}
         onClose={handleClose}
-        // onClick={handleClose}
         PaperProps={{
           elevation: 0,
           sx: {
@@ -98,18 +97,6 @@ export default function PositionedMenu(props) {
               ml: -0.5,
               mr: 1,
             },
-            // "&:before": {
-            //   content: '""',
-            //   display: "block",
-            //   position: "absolute",
-            //   top: 0,
-            //   right: 14,
-            //   width: 10,
-            //   height: 10,
-            //   bgcolor: "background.paper",
-            //   transform: "translateY(-50%) rotate(45deg)",
-            //   zIndex: 0,
-            // },
           },
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
@@ -160,22 +147,6 @@ export default function PositionedMenu(props) {
           Slack
         </MenuItem>
       </Menu>
-      {/* <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-      > */}
-      {/* </Menu> */}
     </div>
   );
 }

@@ -1,13 +1,11 @@
 import "../Header.scss";
 import { Button } from "@mui/material";
-// import DeleteIcon from "@mui/icons-material/Delete";
 import TuneIcon from "@mui/icons-material/Tune";
 import Avatar from "@mui/material/Avatar";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuPopupState from "../../PositionedMenus/FilterPositionedMenu";
-// import Lowerheader from "./LowerHeader/LowerHeader";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -43,7 +41,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -79,49 +76,6 @@ export default function Lowerheader() {
     <div className="LowerHeader">
       <div className="Buttons-Cont">
         <MenuPopupState text={filterBtn}></MenuPopupState>
-        {/* <Button
-          variant="contained"
-          startIcon={<TuneIcon />}
-          sx={{ bgcolor: "#0097DA", fontSize: 10, padding: "10px" }}
-        >
-          Filter
-          <Avatar
-            sx={{
-              color: "black",
-              bgcolor: "white",
-              width: 20,
-              height: 20,
-              fontSize: "12px",
-              marginLeft: "10px",
-            }}
-          >
-            03
-          </Avatar>
-        </Button> */}
-        {/* <Button
-          variant="outlined"
-          sx={{
-            color: "white",
-            bgcolor: "#0097DA",
-          }}
-          className="FilterBtn"
-          startIcon={<TuneIcon />}
-          size="small"
-        >
-          
-          <Avatar
-            sx={{
-              color: "black",
-              bgcolor: "white",
-              width: 20,
-              height: 20,
-              fontSize: "12px",
-              marginLeft: "10px",
-            }}
-          >
-            03
-          </Avatar>
-        </Button> */}
         <Search
           className="SearchBox"
           onKeyPress={(e) => {

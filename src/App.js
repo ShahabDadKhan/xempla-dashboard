@@ -5,7 +5,6 @@ import Footer from "./components/Footer/Footer";
 import ResponsiveGrid from "./components/Grid/ResponsiveGrid";
 import Navbar from "./components/TheNavbar";
 import Header from "./view/Header/Header";
-// import TheNavbar from "./components/TheNavbar";
 
 function App() {
   return (
@@ -14,10 +13,6 @@ function App() {
       <Header />
       <div className="CardDisplay">
         <ResponsiveGrid />
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card /> */}
       </div>
       <Footer />
     </div>

@@ -1,4 +1,3 @@
-import { color } from "@mui/system";
 import "./CardMiddleSection.scss";
 
 export default function CardMiddleSection() {
