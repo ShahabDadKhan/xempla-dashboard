@@ -7,7 +7,11 @@ import ChatImg from "../../assets/images/Image 18.png";
 import TeamImg from "../../assets/images/teams.png";
 import SlackImg from "../../assets/images/slack.png";
 import Divider from "@mui/material/Divider";
+import SearchIcon from "@mui/icons-material/Search";
 import "./FilterPositionedMenu.scss";
+import { styled, alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+
 export default function PositionedMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -16,6 +20,50 @@ export default function PositionedMenu(props) {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const SearchIconWrapper = styled("div")(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }));
+
+  const Search = styled("div")(({ theme }) => ({
+    position: "relative",
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    "&:hover": {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: theme.spacing(3),
+      width: "auto",
+    },
+  }));
+
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: "inherit",
+    "& .MuiInputBase-input": {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create("width"),
+      width: "100%",
+      [theme.breakpoints.up("md")]: {
+        width: "20ch",
+      },
+    },
+  }));
+
+  const searchValue = function (event) {
+    console.log(event.target.value);
   };
 
   return (
@@ -35,10 +83,12 @@ export default function PositionedMenu(props) {
         id="account-menu"
         open={open}
         onClose={handleClose}
-        onClick={handleClose}
+        // onClick={handleClose}
         PaperProps={{
           elevation: 0,
           sx: {
+            width: "100%",
+            left: "50px !important",
             overflow: "visible",
             filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
             mt: 1.5,
@@ -66,9 +116,35 @@ export default function PositionedMenu(props) {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         className="FilterContainer"
       >
-        <MenuItem onClick={handleClose}>
-          <p className="ShareIn">Share in</p>
+        <MenuItem
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontWeight: "600",
+            opacity: "1",
+          }}
+          onClick={handleClose}
+        >
+          <p className="ShareIn">Filter by</p>
+          <p className="ResetFilter">Reset Filters</p>
         </MenuItem>
+        <Divider />
+        <Search
+          className="SearchBox"
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              searchValue(e);
+            }
+          }}
+        >
+          <SearchIconWrapper>
+            <SearchIcon sx={{ color: "#707070" }} />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search"
+            inputProps={{ "aria-label": "search" }}
+          />
+        </Search>
         <MenuItem onClick={handleClose}>In-App Chat</MenuItem>
         <MenuItem onClick={handleClose}>Annotation</MenuItem>
         <Divider />

@@ -127,17 +127,13 @@ export default function Lowerheader() {
           onKeyPress={(e) => {
             if (e.key === "Enter") {
               searchValue(e);
-              //   console.log(e.target.value);
             }
           }}
-          // onChange={searchValue}
         >
           <SearchIconWrapper>
             <SearchIcon sx={{ color: "#707070" }} />
-            {/* <SearchIcon /> */}
           </SearchIconWrapper>
           <StyledInputBase
-            // sx={{ color: "gray" }}
             placeholder="Search"
             inputProps={{ "aria-label": "search" }}
           />
